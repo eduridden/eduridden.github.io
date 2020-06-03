@@ -3,14 +3,11 @@
 .fw-feed-title {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-rendering: optimizelegibility;
+    font-size: 1em;
     overflow: hidden;
     border-bottom: 1px solid #C7CDD1;
     margin: 0 0 6px;
     font-weight: bold;
     margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.fw-feed-title a {
-    
+    padding: 20px 0 5px 0;
 }
