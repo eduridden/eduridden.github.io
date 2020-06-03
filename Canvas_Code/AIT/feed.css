@@ -2,9 +2,9 @@
 
 .fw-feed-title {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 1.3em;
+    font-size: 1em;
     border-bottom: 1px solid #C7CDD1;
     margin: 0px 0px 6px;
     font-weight: bold;
-    padding: 0 0 5px ;
+    padding-bottom: 5px !important;
 }
