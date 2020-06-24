@@ -1,0 +1,717 @@
+/***************************************************/
+/***** FONT IMPORT                    **************/
+/***************************************************/
+
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");  
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+
+/*********************************************************************/
+/***** BEGIN DESIGN TOOLS THEME IMPORT & CUSTOMIZATION  **************/
+/*********************************************************************/
+/* Import statements need to be at the top of your CSS file */
+/* For Main CSS file */
+@import url(https://designtools.ciditools.com/css/themes.css);
+/* For Mobile app CSS file */
+/*@import url(https://designtools.ciditools.com/css/app.css);*/
+/* Institution color customizations */
+@import url(https://designtools.ciditools.com/css/inst_theme_overrides.css);
+/* Theme Colors */
+:root {
+  --dt-color-primary: #45A7C5;
+  --dt-color-primary-contrast: #000000;
+  --dt-color-primary-dark-text: #2D6A80;
+  --dt-color-secondary: #DCEBEE;
+  --dt-color-secondary-contrast: #000000;
+  --dt-color-secondary-dark-text: #1C3C5C;
+  --dt-color-accent: #1C3C5C;
+  --dt-color-accent-contrast: #FFFFFF;
+  --dt-color-graybg: #E6E6E6;
+  --dt-color-graybg-contrast: #000000;
+}
+/*********************************************************************/
+/***** END DESIGN TOOLS HEME IMPORT & CUSTOMIZATION   ****************/
+/*********************************************************************/
+
+/* move the border to the whole login container, as opposed to the login box */
+div#content > div.ic-Login > div.ic-Login__container > div.ic-Login__content > div.ic-Login__innerContent {border: none;}
+div#content > div.ic-Login > div.ic-Login__container > div.ic-Login__content {border: 2px solid #fff;}
+
+/* reduce some of the whitespace */
+div#content > div.ic-Login > div.ic-Login__container > div.ic-Login__content > div.ic-Login__innerContent > div.ic-Login__body {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+div#content > div.ic-Login > div.ic-Login__container > div.ic-Login__content > footer#footer > div#footer-links {padding-top: 0px;}
+
+/* Reduce the size of the top image and centre it*/
+div#content > div.ic-Login > div.ic-Login__container > div.ic-Login__content > div.ic-Login__innerContent div.ic-Login-header__logo > img {width: 50%;}
+div#content > div.ic-Login > div.ic-Login__container > div.ic-Login__content > div.ic-Login__innerContent div.ic-Login-header__logo {text-align: center;}
+div#content > div.ic-Login > div.ic-Login__container > div.ic-Login__content > div.ic-Login__innerContent div.ic-Login-header {display: block;}
+
+/* centre element in the middle of the page */
+div#content > div.ic-Login > div.ic-Login__container{
+  position: fixed;
+    top: 45%;
+    left: 50%;
+    right: 50;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/***************************************************/
+/***** BEGIN GLOBAL NAV TRAY          **************/
+/***************************************************/
+/* #main > span */
+/* #main > span > span */
+.global-nav-custom-tray {
+	width: 448px !important;
+    top: 0px;
+    bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 7px 0px, rgba(0, 0, 0, 0.25) 0px 10px 28px 0px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    z-index: 9999;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+.gnct-easing {
+    left: -200px;
+    opacity: .8;
+}
+
+/* #main > span > span > span (Global navigation tray) */
+.Global-navigation-tray {
+	max-width: 480px;
+}
+
+/* #main > span > span > span > span */
+.gcnt-tray-close-wrapper {
+	right: 8px;
+    position: absolute;
+	left: auto;
+	top: 8px;
+	z-index: 1;
+	display: inline-block;
+}
+
+/* #main > span > span > span > span > button */
+.gcnt-tray-close-btn {
+    font-size: 1rem;
+    height: 28px;
+    all: initial;
+    animation: initial;
+    background: initial;
+    border-collapse: separate;
+    border-color: initial;
+    border-image: initial;
+    border-spacing: initial;
+    bottom: auto;
+    box-shadow: none;
+    box-sizing: border-box;
+    caption-side: top;
+    clear: none;
+    clip: auto;
+    color: rgb(0, 0, 0);
+    column-count: auto;
+    column-fill: balance;
+    column-gap: normal;
+    column-rule: initial;
+    column-width: auto;
+    content: normal;
+    counter-increment: none;
+    counter-reset: none;
+    cursor: pointer;
+    direction: inherit;
+    display: inline-block;
+    empty-cells: show;
+    float: none;
+    font-size: medium;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: initial;
+    font-weight: 400;
+    height: auto;
+    hyphens: none;
+    left: auto;
+    letter-spacing: normal;
+    line-height: normal;
+    list-style: initial;
+    margin: 0px;
+    max-height: none;
+    max-width: 100%;
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 1;
+    orphans: 2;
+    overflow: visible;
+    padding: initial;
+    page-break-after: initial;
+    page-break-before: initial;
+    page-break-inside: initial;
+    perspective-origin: 50% 50%;
+    perspective: none;
+    position: relative;
+    right: auto;
+    tab-size: 8;
+    table-layout: auto;
+    text-align-last: auto;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-transform: none;
+    top: auto;
+    touch-action: manipulation;
+    transform-origin: 50% 50% 0px;
+    transform-style: flat;
+    transform: none;
+    transition: background 0.2s ease 0s, transform 0.2s ease 0s;
+    unicode-bidi: normal;
+    user-select: none;
+    vertical-align: middle;
+    visibility: visible;
+    white-space: normal;
+    widows: 2;
+    width: auto;
+    word-spacing: normal;
+    z-index: auto;
+  	backface-visibility: visible;
+}
+.gcnt-tray-close-btn[type="button"] {
+    -webkit-appearance: none;
+}
+.gcnt-tray-close-btn:focus, .gcnt-tray-close-btn:hover, .gcnt-tray-close-btn:active {
+    color: rgb(0, 142, 226);
+    outline: rgb(0, 142, 226);
+}
+.gcnt-tray-close-btn:focus, .gcnt-tray-close-btn:hover, .gcnt-tray-close-btn:active {
+    text-decoration: none;
+}
+
+/* #main > span > span > span > span > button > span */
+.gcnt-tray-close-btn .gcnt-tray-close-svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* #main > span > span > span > span > button > span > span */
+.gcnt-tray-close-txt {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    clip: rect(0px, 0px, 0px, 0px);
+    margin: -1px;
+    padding: 0px;
+    overflow: hidden;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+}
+
+/* #main > span > span > span > div */
+.tray-with-space-for-global-nav {
+	margin-left: 54px;
+}
+
+/* #help_tray */
+.gnct-content-wrap {
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+/* #help_tray > h1 */
+.gcnt-tray-h1 {
+	color: inherit;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 24.75px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	margin: 0px;
+}
+
+/* #help_tray > ul */
+.gcnt-list {
+	list-style-type: none;
+	-webkit-padding-start: 0px;
+    padding-left: 0px;
+    margin:0.75rem 0;
+	font-weight: 16px;
+	font-family: 400;
+	padding: 0px;
+}
+
+/* #help_tray > ul > li */
+.gcnt-list-item {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22.4px;
+	padding: 0px;
+}
+
+/* #help_tray > ul > li:nth-child(1) > span */
+/*.gcnt-list-link-wrapper {}*/
+/* #help_tray > ul > li:nth-child(1) > span > a */
+.gcnt-list-link-wrapper a.gcnt-list-link:link, .gcnt-list-link-wrapper a.gcnt-list-link:visited, .gcnt-list-link-wrapper button.gcnt-list-link {
+	cursor: pointer;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 400;
+	color: rgb(0, 142, 226);
+	transition: color 0.2s;
+}
+
+/* #help_tray > ul > li:nth-child(1) > div (link desc) */
+.gcnt-link-desc {
+    letter-spacing: normal;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* for use with instructure icons */
+i.gnct_inst_menu_icon:before {
+    font-size: 26px;
+    width: 26px;
+    line-height: 26px;
+}
+i.gnct_inst_menu_icon {
+    width: 26px;
+    height: 26px;
+}
+/* body.primary-nav-expanded .menu-item__text.custom-menu-item__text {
+    white-space: normal;
+    padding: 0 2px;
+} */
+
+/***************************************************/
+/***** Core OVERRIDES            **************/
+/***************************************************/
+
+body {
+    letter-spacing: .0px;  
+    font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 1px;  
+}
+
+.h4, h4 {
+    font-size: 1.2rem;  
+}
+
+#right-side .button-sidebar-wide {
+    border: 1px solid #ccc;  
+    background: #f5f5f5;  
+    text-transform:capitalize;  
+}
+
+button#start_new_course {
+    font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif; 
+    font-weight: normal;  
+    font-size: 1rem;  
+    line-height: 20px;  
+    border-radius: 3px;  
+    padding: 8px 14px;
+    color: #2D3B45;
+}
+
+.header-bar-container a.btn {
+    border: 1px solid #ccc;  
+    background: #f5f5f5;  
+}
+
+.publish-icon,
+i.icon-unpublish {
+    color: red;
+}
+
+.context_module_item .ig-type-icon i,
+#select_context_content_dialog i,
+#module_filters i {
+    background-color: var(--ic-brand-button--primary-bgd);
+    padding: 7px;
+    border-radius: 100px;
+    color: #fff !important;
+}
+
+.context_module_item .ig-type-icon i.icon-document,
+#select_context_content_dialog i.icon-document,
+#module_filters i.icon-document {
+    background-color: #F46036;
+}
+
+.context_module_item .ig-type-icon i.icon-paperclip,
+#select_context_content_dialog i.icon-paperclip,
+#module_filters i.icon-paperclip {
+   background-color: #2E294E;
+}
+
+.context_module_item .ig-type-icon i.icon-discussion,
+#select_context_content_dialog i.icon-discussion,
+#module_filters i.icon-discussion {
+    background-color: #1B998B;
+}
+
+.context_module_item .ig-type-icon i.icon-assignment,
+#select_context_content_dialog i.icon-assignment,
+#module_filters i.icon-assignment {
+    background-color: #228ACC;
+}
+
+.context_module_item .ig-type-icon i.icon-quiz,
+#select_context_content_dialog i.icon-quiz,
+#module_filters i.icon-quiz {
+    background-color: #E07BC4;
+}
+
+.context_module_item .ig-type-icon i.icon-link,
+#select_context_content_dialog i.icon-link,
+#module_filters i.icon-link {
+    background-color: #6E6FBD;
+}
+
+#module_filters i.disabled {
+    background-color:darkgrey !important;
+}
+
+/***************************************************/
+/***** HOMEPAGE ANNOUNCEMENTS         **************/
+/***************************************************/
+
+.ic-notification--info .ic-notification__icon {
+    background: #1F9BCF;  
+}
+
+.ic-notification {
+    border: 1px solid #ccc;  
+    margin-top: 10px;  
+}
+
+span.notification_message a {
+    color: var(--ic-link-color) !important;  
+}
+
+/***************************************************/
+/***** CUSTOM FOOTER                  **************/
+/***************************************************/
+#footer {
+    display:none;  
+}
+
+#ait-footer .footer-logo {
+    background-color: transparent;  
+    background-image: url(https://du11hjcvx0uqb.cloudfront.net/dist/images/footer-logo-878a92a06f.png);  
+    background-repeat: no-repeat;  
+    background-position: left top;  
+    display: inline-block;  
+    height: 16px;  
+    margin: 0 20px 0 0;  
+    width: 114px;  
+}
+
+#ait-footer .ic-app-footer {
+    background-color: #fff;  
+}
+
+
+/* Remove BBB Alert */
+div#big-blue-button-message-container {
+display: none;  
+}
+
+
+/***************************************************/
+/***** THEME OVERRIDES                **************/
+/***************************************************/
+
+.kl_panel_heading.ui-widget-header .ui-state-default, 
+.ui-tabs .ui-tabs-nav .kl_panel_heading.ui-state-default:not(.ui-tabs-active) {
+    background-color: #00afb3;
+}
+
+table.module-header {
+    background: #25bbbd;
+    width: 100%;
+    border: 0px none;
+    color: #fff !important;
+    border-spacing: 10px;
+    border-collapse: separate;
+    margin-left: 0px !important;
+}
+
+td.module-header-left{
+    width: 15%;
+}
+
+td.module-header-left h1{
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 10px 0px 0px 10px;
+}
+
+td.module-header-left h2{
+    font-size: 17px;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 0px 0px 10px 10px;
+}
+
+td.module-header-right {
+   vertical-align: bottom;
+   text-align: right;
+   width: 85%;
+   background-image: url(https://ait.instructure.com/courses/1996/files/444577/preview);
+}
+
+td.module-header-right h1{
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.2;
+    padding: 0px 10px 10px 0px;
+    text-transform: uppercase;
+}
+
+.dp_tabs_nav_ul {
+    background: #ccc;
+}
+
+.dp_tabs_nav_ul .dp_tabs_nav_ul_active_page>a, 
+.dp_tabs_nav_ul li.dp_tabs_nav_ul_active_page>a:focus, 
+.dp_tabs_nav_ul li.dp_tabs_nav_ul_active_page>a:hover {
+    color: #e81e71;
+}
+    
+.dp_tabs_nav_ul .dp_tabs_nav_ul_active_page>a {
+    border-top: 1px solid #e81e71;
+    border-right: 2px solid #e81e71;
+    border-left: 2px solid #e81e71;
+    border-radius: 5px 5px 0 0;
+    margin-top: -5px;
+}
+
+li.kl_panel_heading.ui-tabs-tab.ui-corner-top.ui-state-default.ui-tab a {
+    color: #fff;
+}
+
+li.kl_panel_heading.ui-tabs-tab.ui-corner-top.ui-state-active.ui-tab a {
+    color: #000;
+}
+
+li.kl_panel_heading.ui-tabs-tab.ui-corner-top.ui-state-default.ui-state-hover.ui-tab a {
+    background-color: #e81e71;
+}
+
+li.kl_panel_heading.ui-tabs-tab.ui-corner-top.ui-state-active.ui-state-hover.ui-tab a {
+    color: #e81e71;
+    background-color: #fff;
+}
+
+#kl_wrapper_3.kl_flat_sections_main #kl_banner #kl_banner_left .kl_mod_text {
+    padding: 0px;
+    border-color: #fff !important;
+}
+
+h2.ic-DashboardCard__box__header {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.list-view>ul>li>a, .list-view>nav>ul>li>a:hover {
+    color: #e81e71;
+    text-decoration: none;
+}
+
+a.btn.btn-primary.external:hover,
+.btn-primary:hover, .Button--primary:hover {
+    background: #e81e71;
+    border-color: #990033;
+    text-decoration: none;
+}
+
+a.external:hover span, 
+a.external:focus span, 
+a.external:active span {
+    text-decoration: none;
+}
+
+.ic-Table tr.table-header,
+.ic-Table thead {
+    background-color: var(--ic-brand-primary);
+    color: #fff;
+}
+
+.ic-Table {
+    border: 1px solid var(--ic-brand-primary);
+}
+
+.ic-Table tr:last-child{
+    border-bottom: 1px solid var(--ic-brand-primary);
+}
+
+.ic-Table p:first-child {
+    font-size: 1em !important;
+    font-weight: normal !important;
+    line-height: 1em !important;
+}
+
+table.ic-Table.ic-Table--condensed td {
+    padding: 5px 10px;
+}
+
+pre.kl_code_highlight {
+    padding: 5px;
+    margin: 0px !important;
+}
+
+table.ic-Table pre.kl_code_highlight {
+    margin: 5px !important;
+}
+
+#kl_wrapper_3.kl_flat_sections_main > div:nth-child(odd), 
+#kl_wrapper_3.kl_flat_sections > div:nth-child(odd) {
+    background: #fff;
+}
+
+#kl_wrapper_3.kl_flat_sections h4 {
+    color: #00aeb2;
+}
+
+.pages.show .page-title {
+    visibility: hidden;
+    height: 0px;
+    margin: 0px;
+}
+
+p {
+    color: #444;
+}
+
+/***************************************************/
+/***** LOGIN PAGE                             ******/
+/***************************************************/
+
+/*resize the login box to fit my image and change the color of 'stay signed in'*/
+body.ic-Login-Body {
+	background-image: url(https://ait.instructure.com/courses/1962/files/445090/preview) !;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+body.modal #modal-box.login-box { 
+  height: 405px;
+  width: 623px;
+  color: #071135;
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+video#bgvid {
+    transition: 1s opacity;
+}
+
+.video-dottedoverlay {
+    background-image: url('https://ait.instructure.com/courses/1962/files/445063/preview');
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+
+
+#modal-box .btn { margin-right: 10px !important; }
+
+/*change the color of the login button*/
+
+/*login box*/
+
+body.modal #modal-box.login-box { 
+ background-size: 560px; 
+ background-color: rgba(0,0,0, .75);
+ box-shadow: none; -moz-box-shadow:none; -webkit-box-shadow:none;
+}
+
+body.modal.no-headers #footer-links a {
+    color:#fff;
+}
+
+.ic-Login__actions .Button--login {
+    background-color: #727272;
+    background-image: none;
+    border-color: #727272;
+    color:#fff;
+    -webkit-transition: all 500ms ease-out .5s;
+    -moz-transition: all 500ms ease-out .5s;
+    -o-transition: all 500ms ease-out .5s;
+    transition: all 500ms ease-out .5s;
+}
+
+#modal-box.login-box {
+    background-color: transparent; 
+    box-shadow: none; 
+    -moz-box-shadow:none; 
+    webkit-box-shadow:none;
+}  
+  
+#login_form .login-options { 
+    color: gray; 
+}
+
+/*change the color of 'don't know your password'*/
+body.modal #modal-box.login-box a { 
+    color: gray !important; 
+}
+
+#forgot_password_instructions{
+    color:#fff !important;
+}
+
+body.modal #modal-box.login-box a {
+    color: #fff !important;
+}
+
+.ic-Login__content {
+	background-color:rgb(20,175,178);
+}
+
+.ic-Login-header__logo {
+    background: url(https://ait.instructure.com/courses/1962/files/445090/preview);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 350px;
+    height:80px;
+}
+
+.ic-Login-header__logo img {
+    display:none;
+}
+
+/* @end */
